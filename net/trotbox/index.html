@@ -1,0 +1,78 @@
+<!--DOCTYPE html--->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="TrotBox | Fandom-Friendly Minecraft Server"/>
+    <meta data-react-helmet="true" property="og:title" content="TrotBox | Fandom-Friendly Minecraft Server"/>
+    <meta data-react-helmet="true" property="og:url" content="http://trotbox.net" />
+    <meta data-react-helmet="true" property="og:description" content="Welcome to TrotBox; A Fandom-Friendly Minecraft Server!"/>
+    <meta data-react-helmet="true" property="og:image:url" content="http://trotbox.net/assets/images/icon.png"/>
+    <meta data-react-helmet="true" property="og:image:width" content="300"/>
+    <meta data-react-helmet="true" property="og:image:height" content="300"/>
+    <title>TrotBox | A Fandom-Friendly Minecraft Server</title>
+    <link rel="icon" href="./assets/images/icon.png" type="image/png" sizes="16xi6">
+    <link id = "layout_css" rel="stylesheet" href="css/layout_main.css">
+    <link id = "vars_css" rel="stylesheet" href="css/vars.css">
+    <link id = "tooltip_css" rel="stylesheet" href="css/tooltips.css">
+    <link id = "font_css" rel="stylesheet" href="css/font.css">
+    <link id = "navigation_css" rel="stylesheet" href="css/navigation.css">
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script src='./js/main.js'></script>
+  </head>
+  <body onload="onLoad()" onresize="var resize_val_ = Math.abs(document.documentElement.clientWidth/540); for(var a of document.getElementsByClassName('resize_val')){if(a.id === 'drops'){a.setAttribute('stdDeviation',`${resize_val_*3}`);}else{a.setAttribute('stdDeviation',`${resize_val_}`);}} console.log(`${resize_val_}`);">
+    <div id="bg_container"><div id="bg"></div>   <svg class='hideSvgSoThatItSupportsFirefox'>
+         <filter id='sharpBlur'>
+          <feGaussianBlur stdDeviation='3' class = "resize_val"></feGaussianBlur>
+          <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+          <feComposite in2='SourceGraphic' operator='in'></feComposite>
+         </filter>
+       </svg><svg id="hideSvgSoThatItSupportsFirefox2">
+         <filter id="dropshadow" height="130%">
+    <feGaussianBlur in="SourceAlpha" id="drops" class="resize_val" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+    <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+    <feComponentTransfer>
+      <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode/> <!-- this contains the offset blurred image -->
+      <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+    </feMerge>
+  </filter></svg></div>
+    <div id="header">
+      <h1 id="PageTitle" class=cr_white>TrotBox</h1>
+      <p id="PageDescription" class=cr_white>A Fandom-Friendly Minecraft Multiplayer Experience</p>
+    </div>
+    <div id="thebox"><img type='image/svg' src='./assets/images/EmptyBox.svg'/></div>
+    <div id="content_render"></div>
+    <div id="content" class="cr_white">
+      <p>Welcome to TrotBox; A Fandom-Friendly Minecraft Server! Our mission is to spread the magic of friendship through a fun and engaging in-game experience!</p>
+      <br>
+      <h2 >Features</h2>
+      <h3 >Reputation System</h3>
+      <pre class='cr_white'>  The better you interact other players, the better your reputation! Help us keep roleplay a safe and fun expereince for all.</pre>
+      <h3>Active Staff</h3>
+      <pre class='cr_white'>  Our amazing staff team is active and ready to help if you need it! If we aren't online, make a ticket in-game or on the discord server by typing:</pre>
+      <br>
+       <p><code id='helpcmd' class='mc_7' onmouseout="document.getElementById('isCopied').innerHTML = '&gt;&gt;&gt;click to copy&lt;&lt;&lt;'; document.getElementById('tooltip_help_cmd').style.display = 'none'" onmouseover="document.getElementById('tooltip_help_cmd').style.display = 'block'" onclick="selectText(this.id); document.execCommand('copy'); clearSelection(); document.getElementById('isCopied').innerHTML = `&lt;a class='mc_a'&gt;Copied!&lt;/font&gt;`;">/helpme <a class='mc_b'>&lt;topic&gt;</a> <a class='mc_e'>[info]</a> </code></p>
+       <br>
+       <pre class='cr_white'>This will notify staff that you need help, and we can do our best to help you; but please don't spam it!</pre>
+      <br>
+    </div>
+    <div id="footer">
+    </div>
+    <div nav="./html/nav.html">
+    </div>
+    <div id="tooltips">
+      <span class="tooltip" id="tooltip_home"><h1 class="tooltip_title mc_5">Home</h1><p class="tooltip_description mc_d mc_o">Go Home!</p></span>
+      <span class="tooltip" id="tooltip_forum"><h1 class="tooltip_title mc_6">Forum</h1><p class="tooltip_description mc_d mc_o">Talk with people in the community!</p></span>
+      <span class="tooltip" id="tooltip_about"><h1 class="tooltip_title mc_a">About</h1><p class="tooltip_description mc_d mc_o">Learn more about us!</p></span>
+      <span class="tooltip" id="tooltip_help_cmd"><h1 class="tooltip_title mc_6">'Help Me' Command</h1><p class="tooltip_description mc_e mc_o">Use this command to send a request for help from a staff member!</p><br><p class="tooltip_description mc_7 mc_o" id='isCopied'>&gt;&gt;&gt;click to copy&lt;&lt;&lt;</p></span>
+      <span class="tooltip" id="tooltip_server" onload='getStatus();'><h1 class="tooltip_title mc_d">Trotbox.net<a class='mc_8 mc_o'>:25565</a></h1><p class="tooltip_description mc_5 mc_o">Server Status:<a id='status'></a></p><p class="tooltip_description mc_5 mc_o">Ponies Online:<a id='online'></a></p></span>
+      <span class="tooltip" id="tooltip_discord"><h1 class="tooltip_title mc_9">Discord</h1><p class="tooltip_description mc_d mc_o">Join our Discord Server!</p></span>
+    </div>
+
+  </body>
+</html>

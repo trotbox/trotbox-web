@@ -1,0 +1,96 @@
+#navigation{
+  position: fixed;
+  width: 25%;
+  height: 10%;
+  left: -11%;
+  top: 2vw;
+  z-index: 1000001;
+}
+.nav_btn{
+  position: relative;
+  height: auto;
+  background-color: #975bad;
+  text-align: right;
+  font-size: 1.5vw;
+  line-height: 2.5vw;
+  padding-right: 1.5vw;
+  padding-top: .1vw;
+  padding-bottom: .1vw;
+  transform: skew(-20deg);
+  box-shadow: 0px 0px 5vw rgba(0,0,0,0.5);
+  transition: left .1s;
+}
+.nav_btn:hover{
+  cursor: pointer;
+}
+.nav_btn_0:hover{
+  left: 11%;
+}
+.nav_btn_1:hover{
+  left: -2%;
+}
+.nav_btn_2:hover{
+  left: -15%;
+}
+.nav_btn_3:hover{
+  left: 11%;
+}
+.nav_btn_4:hover{
+left: 38%;
+}
+.nav_btn h1{
+  transform: skew(20deg);
+}
+.nav_btn_0{
+  top: 10%;
+  left: 4%;
+}
+.nav_btn_1{
+  top: 30%;
+  left: -9%;
+}
+.nav_btn_2{
+  top: 50%;
+  left: -22%;
+}
+.nav_btn_3{
+  top: 70%;
+  left: 4%;
+  font-size: 1vw;
+  line-height: 2vw;
+  background-color: rgb(167,116,186);
+}
+.online{
+  box-shadow: 0px 0px 5vw rgba(0,255,0,0.9);
+animation-name: blinking_anim;
+animation-duration: 2.5s;
+animation-iteration-count: infinite;
+}
+.offline{
+  box-shadow: 0px 0px 5vw rgba(255,0,0,0.9);
+}
+@keyframes blinking_anim {
+    0%   {box-shadow: 0px 0px 5vw rgba(0,255,0,0.9); }
+    50%  {box-shadow: 0px 0px 5vw rgba(0,255,0,0.4); }
+    100%  {box-shadow: 0px 0px 5vw rgba(0,255,0,0.9); }
+}
+
+.nav_btn_3 p{
+  font-size: 0vw;
+  line-height: 0vw;
+  transition-duration: 0.1s;
+
+}
+.nav_btn_3:hover p{
+  font-size: 1.3vw;
+  line-height: 2.3vw;
+}
+.nav_btn_4{
+  top: 90%;
+  left: -27%;
+  padding-right: 2.5vw;
+  background-color: #7289DA;
+}
+.nav_btn_4 img{
+  height: 4vw;
+}

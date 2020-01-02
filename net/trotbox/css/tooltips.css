@@ -1,0 +1,28 @@
+.tooltip{
+  display: none;
+  image-rendering: pixelated;
+  background-color: rgba(0,0,0,0.8);
+  border: .8vw solid transparent;
+    border-radius: 2vw;
+     /*background-clip: padding-box;
+      /*background-clip: content-box;  */
+  /*outline: 3px solid rgba(10,0,10,0.8);
+  border-image: linear-gradient(rgba(0,0,127,1), rgba(0,0,64,1)) 1 / 5px;*/
+  /*border: 10px solid transparent;*/
+  border-image: url('../assets/images/tooltipborder.png') 4 stretch;
+  position: fixed;
+  padding: 0.2vw;
+  max-width: 40vw;
+  z-index: 10000000;
+  box-shadow: 0px 0px 2vw rgba(0,0,0,.8);
+}
+.tooltip_title{
+  margin-top: 0px;
+  margin-bottom: 1vw;
+  font-size: 3vw;
+}
+.tooltip_description{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 2vw;
+}

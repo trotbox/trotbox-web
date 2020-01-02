@@ -1,0 +1,9 @@
+:root{
+  --maxWidth: 16000px;
+  --minWidth: 300px;
+  --para-font-size: font-size: calc(30pt + (60pt - 30pt) * ((100vw - var(--minWidth)) / (var(--maxWidth) - var(--minWidth))));
+  --headding_1-font-size: font-size: calc(75pt + (150pt - 75pt) * ((100vw - var(--minWidth)) / (var(--maxWidth) - var(--minWidth))));
+  --headding_2-font-size: font-size: calc(65pt + (130pt - 65pt) * ((100vw - var(--minWidth)) / (var(--maxWidth) - var(--minWidth))));
+  --headding_3-font-size: font-size: calc(55pt + (110pt - 55pt) * ((100vw - var(--minWidth)) / (var(--maxWidth) - var(--minWidth))));
+  --headding_4-font-size: font-size: calc(45pt + (90pt - 45pt) * ((100vw - var(--minWidth)) / (var(--maxWidth) - var(--minWidth))));
+}

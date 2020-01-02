@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Minecraft;
+  src: url('../assets/fonts/minecraft.otf');
+}
+@font-face {
+  font-family: Celestia;
+  src: url('../assets/fonts/celestia_redux.otf');
+}
+.mc_l{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+font-style: bold;
+}
+.mc_m{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+ text-decoration: line-through;
+}
+.mc_n{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+ text-decoration: underline;
+}
+.mc_o{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+font-style: italic;
+}
+.mc_r{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+font-style: normal;
+color: white;
+}
+.mc_0{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+  color: rgb(0, 0, 0);
+}
+.mc_1{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+  color: rgb(0, 0, 170);
+}
+.mc_2{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(0, 170, 0);
+}
+.mc_3{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(0, 170, 170);
+}
+.mc_4{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(170, 0, 0);
+}
+.mc_5{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(170, 0, 170);
+}
+.mc_6{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(255, 170, 0);
+}
+.mc_7{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(170, 170, 170);
+}
+.mc_8{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(85, 85, 85);
+}
+.mc_9{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(85, 85, 255);
+}
+.mc_a{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(85, 255, 85);
+}
+.mc_b{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(85, 255, 255);
+}
+.mc_c{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(255, 85, 85);
+}
+.mc_d{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(255, 85, 255);
+}
+.mc_e{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(255, 255, 85);
+}
+.mc_f{
+  font-family: Minecraft,monospace;
+  text-shadow: .2vw .2vw .1vw black;
+color: rgb(255, 255, 255);
+}
+.cr_white{
+font-family: Celestia,sans-serif;
+color: white;
+text-shadow: .4vw .4vw .2vw rgba(0,0,0,0.5);
+}
